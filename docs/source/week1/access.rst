@@ -88,7 +88,7 @@ you want to access.
 
 The desktop version of ThinLinc looks like this:
 
-.. image:: ../_static/TL_login.png
+.. image:: /_static/TL_login.png
    :alt: Image showing the ThinLinc login portal, with text boxes to enter in the Server, the Username, and the path to the ssh key.
 
 
