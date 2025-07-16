@@ -2,7 +2,7 @@ Command reference
 =================
 :doc:`week1`
 
-Previous section\:
+**Previous section:**
 :doc:`edit`
 
 :ref:`pwd` -

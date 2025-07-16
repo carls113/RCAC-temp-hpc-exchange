@@ -2,7 +2,7 @@ Managing processes
 ==================
 :doc:`week3`
 
-Previous section\:
+**Previous section:**
 :doc:`scripts`
 
 There are many things we can do to

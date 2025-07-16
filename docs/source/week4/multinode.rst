@@ -2,7 +2,7 @@ Multinode jobs and topology
 ===========================
 :doc:`week4`
 
-Previous section\:
+**Previous section:**
 :doc:`files2`
 
 In jobs, you can also request jobs

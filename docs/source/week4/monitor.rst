@@ -2,7 +2,7 @@ Resource utilization and monitoring
 ===================================
 :doc:`week4`
 
-Previous section\:
+**Previous section:**
 :doc:`history`
 
 Now that we can submit multinode jobs,

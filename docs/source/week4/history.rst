@@ -2,7 +2,7 @@ Job history
 ===========
 :doc:`week4`
 
-Previous section\:
+**Previous section:**
 :doc:`multinode`
 
 Let's submit a job again with

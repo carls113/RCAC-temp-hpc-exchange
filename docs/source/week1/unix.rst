@@ -2,7 +2,7 @@ What is Unix?
 =============
 :doc:`week1`
 
-Previous section\:
+**Previous section:**
 :doc:`access`
 
 The Unix Operating System

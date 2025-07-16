@@ -2,7 +2,7 @@ Managing files and directories
 ==============================
 :doc:`week3`
 
-Previous section\:
+**Previous section:**
 :doc:`pipes`
 
 Now that we can create files from the

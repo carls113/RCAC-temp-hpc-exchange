@@ -2,7 +2,7 @@ Submit jobs using the scheduler
 ===============================
 :doc:`week2`
 
-Previous section\:
+**Previous section:**
 :doc:`what_cluster`
 
 In this section, we will talk about what

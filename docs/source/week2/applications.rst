@@ -2,7 +2,7 @@ Applications
 ============
 :doc:`week2`
 
-Previous section\:
+**Previous section:**
 :doc:`files1`
 
 In this section, we'll talk a little bit about

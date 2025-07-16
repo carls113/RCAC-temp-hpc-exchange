@@ -2,7 +2,7 @@ Managing workloads and jobs
 ===========================
 :doc:`week4`
 
-Previous section\:
+**Previous section:**
 :doc:`monitor`
 
 In this last section, we will discuss

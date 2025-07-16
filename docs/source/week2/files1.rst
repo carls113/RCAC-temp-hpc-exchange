@@ -2,7 +2,7 @@ File storage and transfer
 =========================
 :doc:`week2`
 
-Previous section\:
+**Previous section:**
 :doc:`access`
 
 Now that we can get onto the cluster, we

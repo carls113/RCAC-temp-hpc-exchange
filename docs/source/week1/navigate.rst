@@ -2,7 +2,7 @@ Navigate the file system
 ========================
 :doc:`week1`
 
-Previous section\:
+**Previous section:**
 :doc:`anatomy`
 
 Now that we have learned about the shell and the anatomy of a

@@ -2,7 +2,7 @@ Editing files from the command line
 ===================================
 :doc:`week1`
 
-Previous section\:
+**Previous section:**
 :doc:`navigate`
 
 Filename hygiene

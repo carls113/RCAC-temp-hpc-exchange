@@ -2,7 +2,7 @@ Anatomy of a command
 ====================
 :doc:`week1`
 
-Previous section\:
+**Previous section:**
 :doc:`shell`
 
 In the shell, there are two types of programs: built-in and installed.

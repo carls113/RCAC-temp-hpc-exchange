@@ -2,7 +2,7 @@ How to access the clusters
 ==========================
 :doc:`week2`
 
-Previous section\:
+**Previous section:**
 :doc:`clusters`
 
 In this section, we will talk about how to actually

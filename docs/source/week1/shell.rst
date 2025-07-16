@@ -2,7 +2,7 @@ What is the shell?
 ==================
 :doc:`week1`
 
-Previous section\:
+**Previous section:**
 :doc:`unix`
 
 Shell variants

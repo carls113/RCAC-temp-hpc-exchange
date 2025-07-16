@@ -2,7 +2,7 @@ What is a cluster?
 ==================
 :doc:`week2`
 
-Previous section\:
+**Previous section:**
 :doc:`applications`
 
 Since we've now learned how to interact with

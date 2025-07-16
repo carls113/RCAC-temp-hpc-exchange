@@ -2,7 +2,7 @@ Managing output with pipes
 ==========================
 :doc:`week3`
 
-Previous section\:
+**Previous section:**
 :doc:`processes`
 
 When dealing with processes, the output
