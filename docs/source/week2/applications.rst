@@ -153,8 +153,8 @@ let's run it (it may take a couple minutes to run):
    our own conda environment to install `numpy` for
    ourselves.
    
-   Run these two lines of code to create the environment
-   and then activate it:
+   Run these three lines of code to create the environment,
+   activate it, and then run our example:
 
    .. code-block::
       
