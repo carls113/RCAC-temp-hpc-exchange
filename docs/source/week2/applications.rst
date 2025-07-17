@@ -136,6 +136,33 @@ let's run it (it may take a couple minutes to run):
    $ python example.py
    2499.9118
 
+.. admonition:: Numpy error
+
+   If you get an error that says something like this:
+   
+   .. code-block::
+      
+      Traceback (most recent call last):
+      File "/home/username/example.py", line 1, in <module>
+      import numpy as np
+      ModuleNotFoundError: No module named 'numpy'
+
+   This has to do with our (RCAC's) conda installation.
+   There's a long story about why this is happening, but
+   there's a simple solution to it. We're going to make
+   our own conda environment to install `numpy` for
+   ourselves.
+   
+   Run these two lines of code to create the environment
+   and then activate it:
+
+   .. code-block::
+      
+      $ conda create -y -n example numpy
+      $ conda activate example
+      $ python example.py
+      2499.9118
+
 .. important::
 
    This is a computationally intensive task that we
