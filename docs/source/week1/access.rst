@@ -78,7 +78,7 @@ well as restart your session in the desktop version,
 which you can't do in the browser version.
 
 You can download the desktop ThinLinc client from Cendio
-here: `Cendio <www.cendio.com/thinlinc/download/>`_
+here: `Cendio <https://www.cendio.com/thinlinc/download/>`_
 
 Otherwise, if you want to use the browser version,
 simply open up your favorite internet browser and
