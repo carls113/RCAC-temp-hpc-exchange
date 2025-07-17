@@ -58,7 +58,7 @@ use:
    * - `echo`
      - Print statements
    * - `hostname`
-     - Nave of the server you are logged into
+     - Name of the server you are logged into
    * - `date`
      - Current date and time (many format options)
 
@@ -116,7 +116,7 @@ file for both the file *group* and *others*?
 
 .. admonition:: Answer
    
-   `chmod go-r filename.sh`
+   `chmod go-r boo.sh`
 
 Now that we have an executable shell script,
 we may want to move it to a directory that

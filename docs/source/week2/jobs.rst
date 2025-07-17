@@ -217,7 +217,7 @@ to cancel all our own jobs?
 .. admonition:: Answer
    :collapsible: closed
 
-   To cancel all our own jobs: `scancel --me`
+   To cancel all our own jobs: `scancel \-\-me`
 
 .. important::
 
