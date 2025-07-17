@@ -149,10 +149,11 @@ something. The command:
 
 .. code-block::
 
-   $ cp paper.txt thesis.txt
+   $ cp ~/example-data/paper.txt ~/thesis.txt
 
-Will copy the `paper.txt` file data into the new file
-`thesis.txt`, but still keep the original file around.
+Will copy the `paper.txt` file data from the *example-data*
+directory into the new file `thesis.txt`, in the home
+directory, but still keep the original file around.
 
 Let's try backing up a directory:
 
