@@ -53,13 +53,18 @@ Copying to a cluster:
 
 .. code-block::
 
-   $ scp source_file USERNAME@CLUSTER.rcac.purdue.edu:~/some_dir/cluster_file_name
+   $ scp ./source_file USERNAME@CLUSTER.rcac.purdue.edu:~/some_dir/cluster_file_name
 
 Copying from a cluster:
 
 .. code-block::
 
-   $ scp USERNAME@CLUSER.rcac.purdue.edu:~/some_dir/cluster_file_name destination_file
+   $ scp USERNAME@CLUSTER.rcac.purdue.edu:~/some_dir/cluster_file_name ./destination_file
+
+When copying from a cluster, the destination file will
+go into the directory you are currently in. You can also
+specify a path you want the destination file to go to.
+This path can be either relative, or absolute.
 
 **sftp**
 
@@ -86,6 +91,11 @@ the cluster you are connected to:
    sftp> get -P sourcefile somedir/
 
    sftp> exit
+
+When transferring to and from the cluster via `sftp`,
+the transferring on the side of your local computer will
+be relative to the directory you were in when you initiated
+the `sftp` session.
 
 **rsync**
 
