@@ -218,7 +218,13 @@ mkdir
 The last program we'll go over in this section is the `mkdir`
 or *make directory*. This does what it sounds like and will
 create the directory noted in the argument if it doesn't already
-exist. You can also put multiple arguments and `mkdir` will
+exist.
+
+.. code-block::
+
+   $ mkdir ~/example-data
+
+You can also put multiple arguments and `mkdir` will
 create all of them. A helpful option to pass to the `mkdir`
 program is `-p`, which will create parent directories as needed.
 
