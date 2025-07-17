@@ -89,7 +89,7 @@ stacked safely and decompressed in
 concatenated form.
 
 Quiz: What levels of compression are available
-for these programs? Fo these levels mean the
+for these programs? Do these levels mean the
 same thing across all three?
 
 .. admonition:: Answer
