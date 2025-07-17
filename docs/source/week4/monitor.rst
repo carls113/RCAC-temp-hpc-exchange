@@ -21,8 +21,8 @@ and `ssh` directly there.
    Submitted btach job 19823415
 
    $ squeue --me
-   JOBID     USER      ACCOUNT  NAME        NODES  CPUS  TIME_LIMIT  ST  TIME
-   19823415  username  standby  example.sh  1         8       10:00   R  0:05
+   JOBID     USER       ACCOUNT  NAME        NODES  CPUS  TIME_LIMIT  ST  TIME
+   19823415  username lab_queue  example.sh  1         8       10:00   R  0:05
 
 .. note::
 
@@ -78,7 +78,7 @@ Edit your `example.sh` submission script
 to look like this::
 
    #!/bin/bash
-   #SBATCH -A standby
+   #SBATCH -A lab_queue -p cpu -q standby
    #SBATCH -c 128 -t 00:10:00
 
    module load conda

@@ -44,7 +44,7 @@ For the worker, we will edit the
 had earlier to use the new paradigm::
 
    #!/bin/bash
-   #SBATCH -A standby
+   #SBATCH -A lab_queue -p cpu -q standby
    #SBATCH -c 128 -t 00:10:00
 
    module load conda
@@ -83,7 +83,7 @@ Create a new submission script called
 `array.sh` and copy in::
 
    #!/bin/bash
-   #SBATCH -A standby
+   #SBATCH -A lab_queue -p cpu -q standby
    #SBATCH -c 128 -t 00:10:00
    #SBATCH -a 1-30
 

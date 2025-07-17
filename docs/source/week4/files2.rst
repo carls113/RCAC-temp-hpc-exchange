@@ -351,7 +351,8 @@ So, our example job submission script
 might look like this::
 
    #!/bin/bash
-   #SBATCH -A standby -J example
+   #SBATCH -A lab_queue -p cpu -q standby 
+   #SBATCH -J example
    #SBATCH -c 8 -t 00:10:00
    #SBATCH -o ~/example.out
    
@@ -377,7 +378,7 @@ version of the submission file illustrates
 some good ideas with job behavior::
 
    #!/bin/bash
-   #SBATCH -A standby
+   #SBATCH -A lab_queue -p cpu -q standby
    #SBATCH -c 8 -t 00:10:00
 
    module load conda

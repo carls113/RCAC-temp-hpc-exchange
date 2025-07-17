@@ -34,13 +34,95 @@ are commonly inside the script itself, but
 can also be passed to the `sbatch` program
 manually.
 
+Purdue's community clusters require a couple of
+pieces of information to actually submit a job.
+The first of which is what account to submit
+that job to.
+
+Use the `slist` program to show which Slurm accounts
+are available for you to submit to:
+
+.. code-block::
+
+   $ slist
+            			Current Negishi Accounts                              
+   ==============================================================================    
+                  |              CPU Partition              |    AI Partition        
+   Accounts       |   Total     Queue      Run      Free    |  GPU Hours Balance     
+   ============== | ========= ========= ========= ========= | ===================    
+   lab_queue      |       128        32        64        32 |                 0.0
+
+.. important::
+
+   The `lab_queue` here is just a placeholder, in reality,
+   this should be something similar to your PI's username.
+   in the following examples, please substitue `lab_queue`
+   with an account found in the output of `slist`.
+
+.. admonition:: Empty slist
+
+   If your `slist` output is empty, that means that you
+   aren't associated with any groups that have resources
+   allocated to their accounts on that cluster.
+
+Once you know what account you want to submit with,
+you need to know what part of the cluster you want
+to submit that job to. To show the different partitions
+available on the cluster, run the `showpartitions`
+program:
+
+.. code-block::
+
+   $ showpartitions
+   Partition statistics for cluster negishi at Thu Jul 17 16:12:58 EDT 2025
+   Partition       #Nodes     #CPU_cores  Cores_pending   Job_Nodes MaxJobTime Cores Mem/Node
+   Name  State   Total  Idle  Total   Idle Resorc  Other   Min   Max  Day-hr:mn /node     (GB)
+   cpu      up     446     0  57088   2078      0  15973     1 infin   infinite   128     257 
+   highmem  up       6     0    768    236      0   2114     1 infin   infinite   128    1031 
+   gpu      up       5     3    160    132      0      0     1 infin   infinite    32     515 
+
+To see what the different node types mean, use
+the `sfeatures` program:
+
+.. code-block::
+
+   $ sfeatures
+   NODELIST    CPUS  MEMORY   AVAIL_FEATURES   GRES
+   a[000-449]  128   257400   A,a              (null)
+   b[000-005]  128   1031600  B,b              (null)
+   g[000-004]  32    515500   G,g,MI210,mi210  gpu:3
+
+Use `AVAIL_FEATURES` as tags as a constraint
+on clusters with more distinct hardeware
+types.
+
+.. hint::
+ 
+   Use the `-C` or `\-\-constraint` option with `sbatch` to
+   target one of the feature tags.
+
+Lastly, something you may want to specify is the
+*Quality of Service* (QoS) for the job. This would
+include the `standby` QoS for jobs that you want
+to use idle resources and not the high-priority
+resources in your lab account.
+
+For more information see the page here:
+`Scheduler Modernization <https://www.rcac.purdue.edu/news/7245>`_
+
+Essentially, you need to specify an account to submit
+to and a part of the cluster you want to submit to.
+Sometimes, you may want to specify a QoS for your
+job as well. 
+
 Please use a command-line text editor to
 create this shell script, named `example.sh`:
 
 .. code-block::
 
    #!/bin/bash
-   #SBATCH -A standby -c 8 -t 00:01:00
+   #SBATCH -A lab_queue -p cpu -q standby
+   #SBATCH -c 8 -t 00:01:00
 
    module load conda
    python example.py
@@ -61,62 +143,13 @@ resource allocation request. This job ID number
 is helpful to note down as it can be used elsewhere.
 
 .. hint::
-   
+
    The output of your job will, by default, be saved in
    files with this ID (e.g. `slurm-1980435.out`).
 
 The job that we submitted requested 8 cores for 1
-minute from the `standby` account.
-
-Use the `slist` program to show which Slurm accounts
-are available for you to submit to:
-
-.. code-block::
-
-   $ slist
-                        Current Number of Cores                     Node
-   Account          Total    Queue     Run    Free   Max Walltime   Type
-   ============== ================================= ============== ======
-   debug              256        1       0     256       00:30:00      A
-   gpu                160        0      78      82     1-00:00:00      G
-   highmem            768     1152     632     136     1-00:00:00      B
-   standby          55424   686860   32474     573       04:00:00      A
-
-On our clusters, we have owner and system accounts.
-In the `slist` output above, all the system accounts
-are shown, but no owner accounts. Owner accounts
-have the highest priority for the resources that
-are allocated to it. Jobs can also be submitted to
-the `standby` account and will run when idle
-resources are availble (up to a limit) and with
-equal priority to other users.
-
-The `highmem` and `gpu` accounts are associated
-with different node types, B and G, respectively.
-These are both available to everyone similar to
-`standby`. The `debug` account grants quicker
-access for lesser resources within reason.
-
-To see what the different node types mean, use
-the `sfeatures` program:
-
-.. code-block::
-
-   $ sfeatures
-   NODELIST    CPUS  MEMORY   AVAIL_FEATURES   GRES
-   a[000-449]  128   257400   A,a              (null)
-   b[000-005]  128   1031600  B,b              (null)
-   c[000-015]  256   515500   C,c              (null)
-   g[000-004]  32    515500   G,g,MI210,mi210  gpu:3
-
-Use `AVAIL_FEATURES` as tags as a constraint
-on clusters with more distinct hardeware
-types.
-
-.. hint::
- 
-   Use the `-C` or `\-\-constraint` option with `sbatch` to
-   target one of the feature tags.
+minute from your lab's account, to the CPU part of
+the cluster, using the `standby` QoS.
 
 Following is a list of common Slurm resource
 parameters that you may want to specify in your
@@ -131,7 +164,13 @@ shell script:
      - Meaning
    * - `-A`
      - `\-\-account`
-     - Account (default: standby)
+     - Account (default: `lab_queue`)
+   * - `-p`
+     - `\-\-partition
+     - Partition (default: `cpu`)
+   * - `-q`
+     - `\-\-qos
+     - Quality of Service (default: none)
    * - `-J`
      - `\-\-job-name`
      - Job name (default: <script name>)
@@ -188,8 +227,8 @@ with the `squeue` program).
    $ jobinfo 19804944
    Name : example.sh
    User : username
-   Account : standby
-   Partition : a
+   Account : lab_queue
+   Partition : cpu
    Nodes : a305
 
 There are also `jobenv`, `jobcmd`, and `jobscript`
@@ -230,11 +269,11 @@ To get an interactive job (or essentially a shell
 on a compute node), use the `sinteractive` program
 (which is RCAC specific). You will need to specify
 the same parameters as with `sbatch` (e.g. account,
-cores, nodes, time).
+partition, QoS, cores, nodes, time).
 
 .. code-block::
 
-   username@login03.negishi:[~] $ sinteractive -A standby -c 4 -t 00:10:00
+   username@login03.negishi:[~] $ sinteractive -A lab_queue -p cpu -q standby -c 4 -t 00:10:00
    salloc: Pending job allocation 19809515
    salloc: job 19809515 queued and waiting for resources
    salloc: job 19809515 has been allocated resources

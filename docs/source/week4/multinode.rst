@@ -43,7 +43,7 @@ script `hostname.sh`
 .. code-block::
 
    #!/bin/bash
-   #SBATCH -A standby
+   #SBATCH -A lab_queue -p cpu -q standby
    #SBATCH -N2 --ntasks-per-node=2 --cpus-per-task=64
    #SBATCH -t 00:10:00
    
@@ -63,7 +63,7 @@ the command `squeue --me`::
 
    $ squeue --me
    JOBID      USER         ACCOUNT     NAME          NODES   CPUS  TIME_LIMIT ST TIME
-   19804935   username     standby     hostname.sh       2    256    00:10:00 PD 00:00
+   19804935   username   lab_queue     hostname.sh       2    256    00:10:00 PD 00:00
 
 Remember that the job ID will be used
 for the output filename (e.g.
