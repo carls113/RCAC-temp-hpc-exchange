@@ -67,6 +67,11 @@ on CPU and GPU metrics.
    DATE TIME HOSTNAME monitor.cpu.memory 15.7
    ...
 
+This will run indefinitely, so we need to
+interrupt it with a keyboard interrupt.
+Windows and Linux users can press *Ctrl + c*
+to stop it. Mac users will use *Cmd + .*.
+
 .. note::
 
    Use `\-\-help` or `man monitor` to check
@@ -96,6 +101,34 @@ to look like this::
    cd ..
    htar -cvf example.tar example/
 
+.. admonition:: Numpy again
+
+   If you ran into the *no module named numpy*
+   error earlier, you will need to activate
+   your conda environment inside your job as well.
+
+   .. code-block::
+
+      #!/bin/bash
+      #SBATCH -A lab_queue -p cpu -q standby
+      #SBATCH -c 128 -t 00:10:00
+
+      module load conda
+      conda activate example
+      module load monitor
+
+      mkdir -p ${SCRATCH}/example
+      cd ${SCRATCH}/example
+
+      cp ~/example.sh ~/example.py ./
+
+      monitor cpu percent --csv > cpu_per.csv &
+      monitor cpu memory --csv > cpu_mem.csv &
+      python example.py > results.out
+
+      cd ..
+      htar -cvf example.tar example/
+
 Be sure to ask for all the resources on
 the node so you don't collect data on your
 neighbor's job! Start each monitoring task
@@ -110,6 +143,39 @@ of these commands in the script?
    If we didn't, the node would be stuck
    on the monitor command until the walltime
    ran out.
+
+Now, let's run the new monitored submission
+file::
+
+   $ sbatch example.sh
+   Submitted batch job 2095586
+
+Once it's done, let's look at the output of the files::
+
+   $ cd $SCRATCH/example
+   $ cat cpu_mem.csv
+   DATE, TIME, HOSTNAME, monitor.cpu.memory, 15.7
+   DATE, TIME, HOSTNAME, monitor.cpu.memory, 15.7
+   DATE, TIME, HOSTNAME, monitor.cpu.memory, 15.7
+   DATE, TIME, HOSTNAME, monitor.cpu.memory, 15.7
+   ...
+   $ cat cpu_per.csv
+   DATE, TIME, HOSTNAME, monitor.cpu.percent, 0.5
+   DATE, TIME, HOSTNAME, monitor.cpu.percent, 0.5
+   DATE, TIME, HOSTNAME, monitor.cpu.percent, 0.5
+   DATE, TIME, HOSTNAME, monitor.cpu.percent, 0.5
+   ...
+   $ cd ~
+
+Quiz: why is the CPU utilization so low around 0.5%?
+
+.. admonition:: Answer
+   :collapsible: closed
+
+   Because currently, our workflow can only
+   use a single CPU at a time, so the rest
+   of the CPUs that we have allocated to our
+   job are idle.
 
 Next section\:
 :doc:`workloads`

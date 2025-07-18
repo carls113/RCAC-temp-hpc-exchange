@@ -377,12 +377,33 @@ might look like this::
    module load conda
    python example.py
 
+.. admonition:: Numpy again
+
+   If you faced the Numpy problem before,
+   we need to again activate the Conda
+   environment we created to have Numpy
+   available.
+
+   .. code-block::
+
+      #!/bin/bash
+      #SBATCH -A lab_queue -p cpu -q standby
+      #SBATCH -J example
+      #SBATCH -c 8 -t 00:10:00
+      #SBATCH -o ~/example.out
+   
+      module load conda
+      conda activate example
+      python example.py
+
 Once that runs, we can check to see the
 status of the job with `squeue \-\-me`.
 Once it finishes running, we can check
 the output file to make sure it does what
 we expect::
 
+   $ sbatch example.sh
+   Submitted batch job 2095574
    $ cat ~/example.out
    2499.9118
 
@@ -420,10 +441,37 @@ some good ideas with job behavior::
    cd ..
    htar -cvf example.tar example/
 
+.. admonition:: Numpy again
+
+   If you faced the Numpy problem before,
+   we need to again activate the Conda
+   environment we created to have Numpy 
+   available.
+ 
+   .. code-block::
+
+      #!/bin/bash
+      #SBATCH -A lab_queue -p cpu -q standby
+      #SBATCH -c 8 -t 00:10:00
+
+      module load conda
+      conda activate example
+
+      mkdir -p ${SCRATCH}/example
+      cd ${SCRATCH}/example
+
+      cp ~/example.sh ~/example.py ./
+      python example.py > results.out
+
+      cd ..
+      htar -cvf example.tar example/
+
 Here, there's two places we need to check
 for the output of our job. First is the
 `scratch` space that our job ran in::
 
+   $ sbatch example.sh
+   Submitted batch job 2095583
    $ cat $SCRATCH/example/results.out
    2499.9118
 

@@ -127,6 +127,22 @@ create this shell script, named `example.sh`:
    module load conda
    python example.py
 
+.. admonition:: Numpy again
+   
+   If you ran into the *no module named numpy*
+   error earlier, you will need to activate
+   your conda environment inside your job as well.
+
+   .. code-block::
+
+      #!/bin/bash
+      #SBATCH -A lab_queue -p cpu -q standby
+      #SBATCH -c 8 -t 00:01:00
+
+      module load conda
+      conda activate example
+      python example.py
+
 Once that is written, submit it to the
 scheduler with the `sbatch` program:
 
@@ -287,6 +303,10 @@ we were on `login03.negishi` and after it was run, we
 are now on `a195.negishi`, this is a good way to tell
 if you are running on a compute node, or on a login
 node.
+
+To get out of the interactive slurm job, simply
+run the `exit` program and you'll be returned to
+the login node you were on previously.
 
 **Good citezenship**
 

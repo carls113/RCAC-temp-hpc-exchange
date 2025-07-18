@@ -62,6 +62,33 @@ had earlier to use the new paradigm::
    cd ..
    htar -cvf ${SLURM_JOB_NAME}.tar ${SLURM_JOB_NAME}/
 
+.. admonition:: Numpy yet again
+
+   If you faced the Numpy missing issue
+   earlier, we need to have our Conda
+   enviornment activated in our submission
+   script::
+
+      #!/bin/bash
+      #SBATCH -A lab_queue -p cpu -q standby
+      #SBATCH -c 128 -t 00:10:00
+
+      module load conda
+      conda activate example
+      module load monitor
+
+      mkdir -p ${SCRATCH}/${SLURM_JOB_NAME}
+      cd ${SCRATCH/${SLURM_JOB_NAME}
+
+      cp ~/example.sh ~/example.py ./
+
+      monitor cpu percent --csv > cpu_per.csv &
+      monitor cpu memory --csv > cpu_mem.csv &
+      python example.py > results.out
+
+      cd ..
+      htar -cvf ${SLURM_JOB_NAME}.tar ${SLURM_JOB_NAME}/
+
 We've only modified the areas of the
 script that were affected by the
 working directory name that we
@@ -70,6 +97,22 @@ we give for the job name will now
 result in that directory being created
 and used in Scratch. See the *file pattern*
 section of the *manual page* for details.
+
+We don't have to submit this one, but to
+submit it, we would run the `submit.sh`
+file as a program::
+
+   $ ./submit.sh
+   Submitted batch job 209526
+   Submitted batch job 209527
+   Submitted batch job 209528
+   ...
+
+This will create 30 different scratch folders
+named `example-01` to `example-30`, copy all
+relevant files there, run the python script
+30 times and bundle all the folders up to
+send to Fortress.
 
 We can also use something called "Slurm
 job arrays" to automate our workflow.
@@ -103,6 +146,35 @@ Create a new submission script called
    cd ..
    htar -cvf ${site}.tar ${site}/
 
+.. admonition:: Numpy for the last time
+
+   If you faced the Numpy missing issue
+   earlier, we need to have our Conda
+   enviornment activated in our submission
+   script::
+
+      #!/bin/bash
+      #SBATCH -A lab_queue -p cpu -q standby
+      #SBATCH -c 128 -t 00:10:00
+      #SBATCH -a 1-30
+
+      module load conda
+      conda activate example
+      module load monitor
+
+      site=example-${SLURM_ARRAY_TASK_ID}
+      mkdir -p ${SCRATCH}/${site}
+      cd ${SCRATCH/${site}
+
+      cp ~/array.sh ~/example.py ./
+
+      monitor cpu percent --csv > cpu_per.csv &
+      monitor cpu memory --csv > cpu_mem.csv &
+      python example.py > results.out
+
+      cd ..
+      htar -cvf ${site}.tar ${site}/
+
 This will submit an array of 30 jobs
 to do the same task many times and
 save the output in different directories.
@@ -120,8 +192,42 @@ you prefer use the pilot job paradigm.
 This is where you request one job and
 run many tasks inside that job.
 
-There are many tools out there for
-computing many tasks with the pilot
+One naive example of this would be
+the following job script::
+
+   #!/bin/bash
+   #SBATCH -A lab_queue -p cpu -q standby
+   #SBATCH -c 128 -t 00:10:00
+
+   module load conda
+   conda activate example
+
+   site=example-naive
+   mkdir -p ${SCRATCH}/${site}
+   cd ${SCRATCH/${site}
+
+   cp ~/array.sh ~/example.py ./
+
+   python example.py > results1.out &
+   python example.py > results2.out &
+   python example.py > results3.out &
+
+   wait
+
+   cd ..
+   htar -cvf ${site}.tar ${site}/
+
+This just manually runs our workflow
+multiple times and saves the results
+to a different output file each time.
+You could extend this to doing multiple
+different workflows in tandem, as long
+as they fit within the job (RAM and CPUs)
+you can do whatever you want with the
+resources.
+
+There are many tools out there for automating
+computing of many tasks with the pilot
 job paradigm. Two examples are:
 HTCondor and HyperShell. They both
 achieve the task of computing many
