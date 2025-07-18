@@ -302,6 +302,10 @@ back.
 To exit the `hsi` interface, use the `exit`
 command.
 
+.. code-block::
+   [Fortress HSI]/home/username-> exit
+   username@loginXX.CLUSTER:[~] $ 
+
 You can also use `hsi` commands in one shot
 without logging in first. Try removing the
 `example-data` directory from the cluster
