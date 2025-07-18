@@ -92,6 +92,30 @@ relative PID).
 
    $ kill -s int %1
 
+.. hint::
+
+   If you don't want to wait for a
+   program to finish normally, you
+   can send an interrupt signal with
+   your keyboard. For Linux and Windows
+   users, you press *Ctrl + c* and for
+   Mac users, you press *Cmd + .*.
+
+Once you send a program to the
+background, you can pull it back to
+the foreground by using the `fg` program::
+
+   $ sleep 600 &
+   [1] 222747
+
+   $ fg %1
+
+This code will bring the `sleep 600`
+program back to the foreground and
+will wait for it to finish before
+giving you back control of the
+command line.
+
 The `kill` program can technically
 send any signal to a program (despite
 its ominous name). In the example above,
