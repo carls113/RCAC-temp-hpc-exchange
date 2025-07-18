@@ -263,6 +263,17 @@ get the same information.
    [Fortress HSI]/home/username->cd example
    [Fortress HSI]/home/username/example->ls -lh
 
+Now let's remove the directory that we
+just created, we don't need it cluttering
+up our file system:
+
+.. code-block::
+
+   [Fortress HSI]/home/username/example->cd ..
+   [Fortress HSI]/home/username->rm -r example
+   Unknown option or missing argument: 'r' ignored
+   *** Warning: `/home/carls113/example' is a directory - ignored
+
 Quiz: Why can't we remove this directory
 with `rm -r`? What command do we need to
 remove a directory?
