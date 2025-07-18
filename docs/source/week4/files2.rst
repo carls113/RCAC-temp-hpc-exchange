@@ -247,8 +247,11 @@ use the `hsi/htar` programs. Use `hsi` interactively
 We can use `hsi` to navigate the tape
 archive system. We can create, remove,
 rename, and directories "like normal".
-Use `hsi help` for a listing of commands
-and what they do.
+While in the `hsi` interface, use the 
+`help` program for a listing of commands
+and what they do. Outside of the `hsi`
+interface, you can run `hsi help` to
+get the same information.
 
 .. code-block::
 
