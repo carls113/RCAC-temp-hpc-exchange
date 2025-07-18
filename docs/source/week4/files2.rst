@@ -377,6 +377,15 @@ might look like this::
    module load conda
    python example.py
 
+Once that runs, we can check to see the
+status of the job with `squeue \-\-me`.
+Once it finishes running, we can check
+the output file to make sure it does what
+we expect::
+
+   $ cat ~/example.out
+   2499.9118
+
 Quiz: If we run the job a second time,
 will it overwrite the output file? If
 so, what other options exist?
@@ -386,7 +395,8 @@ so, what other options exist?
 
    It will overwrite it. There are many
    options available, like job name, job
-   ID, and so on.
+   ID, and so on. Use `man sbatch` to
+   find out what these options are.
 
 We can implement our basic knowledge of
 UNIX programs to isolate our job and
@@ -409,6 +419,20 @@ some good ideas with job behavior::
 
    cd ..
    htar -cvf example.tar example/
+
+Here, there's two places we need to check
+for the output of our job. First is the
+`scratch` space that our job ran in::
+
+   $ cat $SCRATCH/example/results.out
+   2499.9118
+
+Then, we also need to check that our
+`example.tar` file was created on Fortress::
+
+   $ hsi ls
+   /home/username:
+   example-data/   example-data.tar   example.tar
 
 Next section\:
 :doc:`multinode`

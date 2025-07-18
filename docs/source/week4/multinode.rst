@@ -59,7 +59,7 @@ the `sbatch` program::
    Submitted batch job 19804935
 
 You can check on the job status using
-the command `squeue --me`::
+the command `squeue \-\-me`::
 
    $ squeue --me
    JOBID      USER         ACCOUNT     NAME          NODES   CPUS  TIME_LIMIT ST TIME
