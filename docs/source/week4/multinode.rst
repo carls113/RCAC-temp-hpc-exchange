@@ -65,6 +65,14 @@ the command `squeue \-\-me`::
    JOBID      USER         ACCOUNT     NAME          NODES   CPUS  TIME_LIMIT ST TIME
    19804935   username   lab_queue     hostname.sh       2    256    00:10:00 PD 00:00
 
+If you don't see anything in the output
+of `squeue \-\-me`, that's because your
+job already finished. We will discuss
+how to see past jobs in the next section:
+:doc:`history`. If this happens, use
+the job ID that was put out by the
+`sbatch` command.
+
 Remember that the job ID will be used
 for the output filename (e.g.
 `slurm-19804935.out`). You can use
