@@ -107,7 +107,7 @@ scripts, etc. You can store critical
 research data here to be shared amongst
 your group. It's ok to run jobs against
 but it's not good for intensive I/O
-scenarios. It is good for medium to 
+scenarios. It is good for medium to
 long term storage.
 
 Scratch directory
@@ -150,7 +150,7 @@ short-term storage of intermediate files.
 .. warning::
 
    Beware of regular purging of older files.
-   You can use the `purgelist` program to 
+   You can use the `purgelist` program to
    tell you which files will be purged. Please
    do not try to game the system, as we will
    ban users who repeatedly do so. Just back
@@ -175,7 +175,7 @@ snapshots of data in the `/tmp` directory.
 It is node-local, i.e. each node of the
 cluster has its own `/tmp` that is
 world-readable (and sort of writable). It
-is what researchers used to use before 
+is what researchers used to use before
 the Scratch directory.
 
 It is good for node-local caching of data
@@ -247,7 +247,7 @@ use the `hsi/htar` programs. Use `hsi` interactively
 We can use `hsi` to navigate the tape
 archive system. We can create, remove,
 rename, and directories "like normal".
-While in the `hsi` interface, use the 
+While in the `hsi` interface, use the
 `help` program for a listing of commands
 and what they do. Outside of the `hsi`
 interface, you can run `hsi help` to
@@ -304,7 +304,7 @@ command.
 
 .. code-block::
    [Fortress HSI]/home/username-> exit
-   username@loginXX.CLUSTER:[~] $ 
+   username@loginXX.CLUSTER:[~] $
 
 You can also use `hsi` commands in one shot
 without logging in first. Try removing the
@@ -312,7 +312,7 @@ without logging in first. Try removing the
 and then bringing it back with `hsi get`.
 To be extra safe, we will rename it here
 instead of actually deleting the directory
-and its contents. 
+and its contents.
 
 .. code-block::
 
@@ -348,7 +348,7 @@ one stream with the `htar` program.:
 In the example above, the options to the `htar`
 program are similar to the `tar` program. Execpt,
 we don't need to compress it using `gzip` (with
-the `z` flag). 
+the `z` flag).
 
 .. note::
 
@@ -357,7 +357,7 @@ the `z` flag).
    built-in compression.
 
 In our job script, we can use certain Slurm
-options to specify a path for the consol
+options to specify a path for the console
 output files in our job. These options are
 `-o/\-\-output` (for `stdout` and `-e/\-\-error`
 (for `stderr`). Output paths can contain
@@ -369,11 +369,11 @@ So, our example job submission script
 might look like this::
 
    #!/bin/bash
-   #SBATCH -A lab_queue -p cpu -q standby 
+   #SBATCH -A lab_queue -p cpu -q standby
    #SBATCH -J example
    #SBATCH -c 8 -t 00:10:00
    #SBATCH -o ~/example.out
-   
+
    module load conda
    python example.py
 
@@ -391,7 +391,7 @@ might look like this::
       #SBATCH -J example
       #SBATCH -c 8 -t 00:10:00
       #SBATCH -o ~/example.out
-   
+
       module load conda
       conda activate example
       python example.py
@@ -445,9 +445,9 @@ some good ideas with job behavior::
 
    If you faced the Numpy problem before,
    we need to again activate the Conda
-   environment we created to have Numpy 
+   environment we created to have Numpy
    available.
- 
+
    .. code-block::
 
       #!/bin/bash
@@ -484,4 +484,3 @@ Then, we also need to check that our
 
 Next section\:
 :doc:`multinode`
-

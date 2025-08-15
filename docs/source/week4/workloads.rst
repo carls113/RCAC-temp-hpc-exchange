@@ -33,7 +33,7 @@ The submitter we will call `submit.sh`
 and should look like this::
 
    #!/bin/bash
-   
+
    for step in {01..30}
    do
       sbatch example.sh -J example-${step}
@@ -78,7 +78,7 @@ had earlier to use the new paradigm::
       module load monitor
 
       mkdir -p ${SCRATCH}/${SLURM_JOB_NAME}
-      cd ${SCRATCH/${SLURM_JOB_NAME}
+      cd ${SCRATCH}/${SLURM_JOB_NAME}
 
       cp ~/example.sh ~/example.py ./
 
@@ -181,7 +181,7 @@ save the output in different directories.
 
 These examples are only the beginning,
 the mechanics of a job array can get
-a lot more sophisticated from here. 
+a lot more sophisticated from here.
 
 However, there are limitations on
 what you can do by submitting many
@@ -244,7 +244,7 @@ ticket to `our ticketing system`_
 
 .. toctree::
    :hidden:
-   
+
    ../congratulations
 
 Next section\:
