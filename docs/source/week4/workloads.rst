@@ -164,7 +164,7 @@ Create a new submission script called
 
       site=example-${SLURM_ARRAY_TASK_ID}
       mkdir -p ${SCRATCH}/${site}
-      cd ${SCRATCH/${site}
+      cd ${SCRATCH}/${site}
 
       cp ~/array.sh ~/example.py ./
 
