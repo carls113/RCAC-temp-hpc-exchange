@@ -35,7 +35,7 @@ Negishi consists of Dell compute nodes with two 64-core
 AMD Epyc "Milan" processors (128 cores per node)
 and 256 GB of memory. All nodes have 100 Gbps HDR
 Infiniband interconnect and a 6-year warranty. Bell
-will be retired after the warranty ends, in the fall 
+will be retired after the warranty ends, in the fall
 of 2028. Negishi is the successor of Bell.
 
 Negishi is great for typical, multi-processing tasks.
@@ -115,5 +115,4 @@ and usually requires a review of what and why they are
 needed.
 
 Next section\:
-:doc:`files1`
-
+:doc:`access`
