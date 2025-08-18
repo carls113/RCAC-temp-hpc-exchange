@@ -119,7 +119,7 @@ job arrays" to automate our workflow.
 This way, we can submit a single job instead
 of manually submitting many copies.
 The job is duplicated and runs `N` times
-wiht only `SLURM_ARRAY_TASK_ID` environment
+with only `SLURM_ARRAY_TASK_ID` environment
 variable different.
 
 Create a new submission script called
