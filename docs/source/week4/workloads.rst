@@ -204,7 +204,7 @@ the following job script::
 
    site=example-naive
    mkdir -p ${SCRATCH}/${site}
-   cd ${SCRATCH/${site}
+   cd ${SCRATCH}/${site}
 
    cp ~/array.sh ~/example.py ./
 
