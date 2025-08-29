@@ -24,7 +24,7 @@ It would try to list everything in the `example` and
 `data` directories, not your correct folder with a
 space in it. If you absolutely must have a space
 or another special character in your file's name,
-you can escape it by using the escape character (\)
+you can escape it by using the escape character (\\)
 to tell the command line to take that character as
 is and not try to interpret it. So you could do
 
@@ -58,7 +58,7 @@ friendly.
 
 .. _nano:
 
-Nano
+nano
 ^^^^
 
 To start `nano` you can do one of two ways:
@@ -78,10 +78,10 @@ Or provide a file name to start editing that file:
 Nano looks similar to this:
 
 .. code-block::
-   :emphasize-lines: 1, 6, 7  
- 
+   :emphasize-lines: 1, 6, 7
+
    GNU nano 2.9.8 		document.txt		 Modified
-   
+
    It’s not "publish or perish" anymore,
    it’s "share and thrive".
 
@@ -168,7 +168,7 @@ Oops, what happened here?
    :collapsible: closed
 
    We can't copy directories without recursively copying
-   its contents, with the `-r` option. 
+   its contents, with the `-r` option.
 
 .. _rm:
 
@@ -186,7 +186,7 @@ you know what you're deleting before you run the program.
 
    $ rm thesis.txt
 
-To delete directories, you need to use the `-r` or 
+To delete directories, you need to use the `-r` or
 recursive option. This will delete the directory and
 everything inside of it. Again, this is permanent, so
 be very careful to know exactly what you're deleting.
@@ -198,4 +198,3 @@ be very careful to know exactly what you're deleting.
 
 Next section\:
 :doc:`reference`
-

@@ -18,11 +18,11 @@ but the default shell for many Linux systems is **bash**.
 Anatomy of the prompt
 ---------------------
 
-One important aspec of the shell is the prompt, which shows you
+One important aspect of the shell is the prompt, which shows you
 information about your shell session. A typical shell could look
 like this::
 
-   username@login03.negishi:[~] $ 
+   username@login03.negishi:[~] $
 
 It starts with your username, telling you who you are logged into the
 cluster as. After the at symbol, it tells you what specific computer
@@ -40,4 +40,3 @@ shell.
 
 Next section\:
 :doc:`anatomy`
-

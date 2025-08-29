@@ -54,14 +54,14 @@ directory and do not start with a slash.
 Abolute path
 
 .. code-block:: bash
-   
+
    $ ls /home/username/example-data
    output_of_ls
 
 Relative path
 
 .. code-block:: bash
-   
+
    $ ls example-data
    output_of_ls
 
@@ -137,7 +137,7 @@ which tells `ls` to print out more information about the files.
 The following code block shows an example of what you might see from
 the longer `ls` output:
 
-.. code-block: bash
+.. code-block:: bash
 
    $ ls -a -l -h ~/.ssh
    total 6.0K
@@ -234,9 +234,8 @@ program is `-p`, which will create parent directories as needed.
 
 Which will create the `another_one` directory in your home
 directory and the `test1` directory within the `another_one`
-directory. 
+directory.
 
 
 Next section\:
 :doc:`edit`
-

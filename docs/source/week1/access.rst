@@ -15,7 +15,7 @@ There are three main ways to get onto the cluster(s):
 #. Open on Demand (gateway)
 
 We will discuss each of these options and you can
-choose which option(s) makes the most sense for you. 
+choose which option(s) makes the most sense for you.
 
 **ssh**
 
@@ -44,7 +44,7 @@ You should see something that looks like this:
 
    ************************************************************
 
-   (USERNAME@CLUSTER.rcac.purdue.edu) Password: 
+   (USERNAME@CLUSTER.rcac.purdue.edu) Password:
 
 Here you enter your Purdue password appended with a ',push'.
 So you should enter in 'password,push'. It will not look like
@@ -95,7 +95,7 @@ The desktop version of ThinLinc looks like this:
 You may need to click the `Advanced` button to see
 everything you need to.
 
-The Server here is `desktop.CLUSTER.rcac.purdue.edu`, where 
+The Server here is `desktop.CLUSTER.rcac.purdue.edu`, where
 `CLUSTER` is replaced with the name of the cluster
 you want to access. The username is your Purdue username
 and password is your Purdue password appended with ',push'.
@@ -119,7 +119,7 @@ unless you don't log in for 2 weeks.
 **Open on Demand**
 
 Open on Demand, also known as the Gateway, is a modern web
-interace to our HPC resources. You don't need to open a
+interface to our HPC resources. You don't need to open a
 terminal, or understand a UNIX command-line shell. Although,
 you can open a shell from it. You can check/edit files and
 organize your data through the web interface. You can even
@@ -137,4 +137,3 @@ Single Sign On page, you should see something like this:
 
 Next section\:
 :doc:`unix`
-

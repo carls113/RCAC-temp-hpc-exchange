@@ -37,9 +37,9 @@ the copy command to recurse into directories and copy all the files
 within those directories.
 
 .. caution::
-   
+
    Not all options are the same in different programs, some may even
-   mean completely different things for different programs. Excercise
+   mean completely different things for different programs. Exercise
    caution and look at the manual pages for each program to make sure
    you understand what each option does.
 
@@ -70,4 +70,3 @@ We will go over strategies to overcome this error in the
 
 Next section\:
 :doc:`navigate`
-

@@ -14,7 +14,7 @@ early 1970s. It is often associated with its rich tradition with
 command-line environments, the UNIX "shell", and the C-programming
 language.
 
-Unix can also refer to a trademark, where other operating must
+Unix can also refer to a trademark, where other operating systems must
 conform to a certain set of standards to be considered a "UNIX"
 operating system.
 
@@ -69,9 +69,9 @@ where you may have thousands of users.
 
 Lastly, UNIX systems often have primarily text-based interfaces,
 as opposed to GUI-based ones such as Microsoft Windows. In
-addition, there are many compilers and libaries that are needed
+addition, there are many compilers and libraries that are needed
 for scientific programming that are readily available for UNIX
-systems, such as **MPI** and **BLAS** implemetations.
+systems, such as **MPI** and **BLAS** implementations.
 
 Unix components
 ---------------
@@ -144,4 +144,3 @@ interface to interact with UNIX systems.
 
 Next section\:
 :doc:`shell`
-
