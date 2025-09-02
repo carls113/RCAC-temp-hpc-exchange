@@ -150,7 +150,7 @@ Create a new submission script called
 
    If you faced the Numpy missing issue
    earlier, we need to have our Conda
-   enviornment activated in our submission
+   environment activated in our submission
    script::
 
       #!/bin/bash

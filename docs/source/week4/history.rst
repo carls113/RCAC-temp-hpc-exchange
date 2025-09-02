@@ -25,7 +25,7 @@ Notice that the job disappeared
 from the output of `squeue` after
 completion. How can we check on jobs
 after they've disappeared here? If
-you know the jo ID, you can always
+you know the job ID, you can always
 run `jobinfo`::
 
    $ jobinfo 19823415
@@ -96,4 +96,3 @@ Quiz: How do we control output fields?
 
 Next section\:
 :doc:`monitor`
-

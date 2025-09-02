@@ -83,7 +83,7 @@ clusters. It is larger than your
 home directory (100GB free trial)
 and it can grow in 1TB increments
 at \$70/TB/year. It has reasonable
-perfomance with redundant hardware
+performance with redundant hardware
 that is never purged and is protected
 by snapshots.
 
@@ -346,7 +346,7 @@ one stream with the `htar` program.:
    ...
 
 In the example above, the options to the `htar`
-program are similar to the `tar` program. Execpt,
+program are similar to the `tar` program. Except,
 we don't need to compress it using `gzip` (with
 the `z` flag).
 

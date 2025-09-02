@@ -18,7 +18,7 @@ and `ssh` directly there.
 .. code-block::
 
    $ sbatch example.sh --exclusive
-   Submitted btach job 19823415
+   Submitted batch job 19823415
 
    $ squeue --me
    JOBID     USER       ACCOUNT  NAME        NODES  CPUS  TIME_LIMIT  ST  TIME
@@ -179,4 +179,3 @@ Quiz: why is the CPU utilization so low around 0.5%?
 
 Next section\:
 :doc:`workloads`
-
