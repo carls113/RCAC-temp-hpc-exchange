@@ -34,14 +34,14 @@ example in the following sections:
 .. code-block::
 
    #!/bin/bash
-   
+
    echo 'Ooh, so scary!'
 
 Please use your command-line editor to copy this
 into a file named `boo.sh`.
 
 Notice the first line is the "shebang" that starts
-with a `#!`, followed by the interpreter, wihch in
+with a `#!`, followed by the interpreter, which in
 this case is the bash shell. We then have the `echo`
 program, which just prints out the argument(s) to
 the console.
@@ -83,10 +83,10 @@ check the permissions?
 
 .. admonition:: Permission Hint
    :collapsible: closed
-   
+
    Use the command `ls -l boo.sh` to see the
    permissions::
-      
+
       $ ls –l boo.sh
       -rw-r--r-- 1 username student 22 Oct 11 01:44 boo.sh
 
@@ -106,7 +106,7 @@ check the permissions?
       Ooh, so scary!
 
 .. admonition:: `chmod` hint
-   
+
    The `chmod` program takes both relative
    (**[ugo][-+][rwx]**) and absolute (e.g. 700)
    syntax.
@@ -115,7 +115,8 @@ Quiz: How would we remove read permissions on a
 file for both the file *group* and *others*?
 
 .. admonition:: Answer
-   
+   :collapsible: closed
+
    `chmod go-r boo.sh`
 
 Now that we have an executable shell script,
@@ -146,7 +147,8 @@ What happens if we close the shell and reopen it?
    :collapsible: closed
 
    It doesn't matter if we change directories, but
-   the change to our PATH variable is not kept.
+   the change to our PATH variable is not kept if
+   we close the shell.
 
 Environment variables
 ^^^^^^^^^^^^^^^^^^^^^
@@ -192,7 +194,7 @@ it's not necessary.
 
 Variables are just dumb text, unlike other
 programming languages. While there are some
-execptions, there are no complex data
+exceptions, there are no complex data
 structures.
 
 .. code-block::
@@ -248,7 +250,7 @@ There are a couple of "magic" variables which
 are not like other programming languages.
 
 .. code-block::
-   
+
    echo $RANDOM
 
 Will always give you a random value, even if
@@ -340,7 +342,7 @@ login profile.
 This will add the newly created `bin` folder in your
 home directory to the `PATH` variable every time
 you create a new session. Note that we have `$PATH`
-at the beginning of the assignment, that's so we 
+at the beginning of the assignment, that's so we
 don't only have `$HOME/bin` as our entire `PATH`.
 Because that would mean the only place that the
 computer looks for programs would be in your
@@ -355,10 +357,10 @@ Exit status
 ^^^^^^^^^^^
 
 Successful programs should exit with a zero (0).
-And any non-zero exit statis should be considered
+And any non-zero exit status should be considered
 an error condition. Often, programs will document
 the meaning of their different exit status values
-in thier manual page.
+in their manual page.
 
 .. code-block::
 
@@ -387,4 +389,3 @@ else.
 
 Next section\:
 :doc:`processes`
-

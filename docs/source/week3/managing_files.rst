@@ -36,7 +36,7 @@ to the `tar` program and two arguments. The
 options are, in order, compress, verbose, with
 gzip, to a file named the following. The first
 argument is actually an extension of the `f`
-option, which tells `tar` what we want to name 
+option, which tells `tar` what we want to name
 the archive. The second (and following)
 argument(s) tells `tar` what we want to archive.
 To undo the archiving, simple swap the `c`
@@ -96,10 +96,10 @@ same thing across all three?
    :collapsible: closed
 
    `gzip`: options 1-9, 1 being fastest with
-   the least compressiong, 9 being slowest with
+   the least compression, 9 being slowest with
    most optimal compression.
 
-   `bzip2`: options 1-9, coose the block size
+   `bzip2`: options 1-9, choose the block size
    of the file when compressing, 1 being 100 k
    and 9 being 900 k.
 
@@ -119,7 +119,7 @@ pattern. To do this, use the `find` program.
    $ find ~ -type f -name "*.txt" | grep "example-data"
    ~/example-data/paper.txt
 
-In the exmaple, we used some arguments and some
+In the example, we used some arguments and some
 options, but these are special options that the
 `find` program calls "primaries" (which is why
 they don't have two leading dashes even though
@@ -162,4 +162,3 @@ a pipeline for these kinds of management tasks.
 
 Next section\:
 :doc:`../week4/week4`
-

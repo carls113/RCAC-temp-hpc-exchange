@@ -32,7 +32,7 @@ shell while the background processes
 are going.
 
 .. hint::
-   
+
    After the program is put in the
    background, the shell tells you
    two numbers. The first number is
@@ -70,7 +70,7 @@ do?
 
 .. admonition:: Answer
    :collapsible: closed
-   
+
    It restricts the output to only
    show jobs from that one user.
 
@@ -79,14 +79,14 @@ in the background to complete with
 the `wait` program. You can also
 re-attach to background processes
 with the `fg` program. Lastly, you
-can interrupt proccesses with the
+can interrupt processes with the
 `kill` command (using \% for the
 relative PID).
 
 .. code-block::
 
    $ wait
-   
+
    $ sleep 600 &
    [1] 222728
 
@@ -131,7 +131,7 @@ about the **SIGNINT**, **SIGTERM**, and
 interrupt signals with increasing amounts
 of force to the program.
 
-However, there are many other sigals with
+However, there are many other signals with
 different purposes other than to halt a
 process.
 
@@ -159,4 +159,3 @@ before the walltime limit).
 
 Next section\:
 :doc:`pipes`
-
