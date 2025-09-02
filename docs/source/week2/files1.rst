@@ -25,7 +25,7 @@ as that is where we land whenever we log into the
 clusters.
 
 There are 6 main ways to get data and files onto and off of
-the cluters:
+the clusters:
 
 #. Open on Demand
 #. scp
@@ -46,7 +46,7 @@ all, you're going to have a bad time.
 
 `scp` stands for `secure copy protocol` and is the
 server version of the `cp` we saw last week (:ref:`cp`)
-It too need a source and a destination, but one of 
+It too need a source and a destination, but one of
 them may be a server.
 
 Copying to a cluster:
@@ -72,7 +72,7 @@ This path can be either relative, or absolute.
 reliable way to transfer files between the cluster and
 another computer.
 
-Essentially, `sftp` starts a file transfer shell on a 
+Essentially, `sftp` starts a file transfer shell on a
 remote computer. Simple use the command `sftp USERNAME@CLUSTER.rcac.purdue.edu`
 to start the file transfer session. After logging in,
 use the `get` and `put` programs to transfer to and from
@@ -100,7 +100,7 @@ the `sftp` session.
 **rsync**
 
 `rsync` is similar to `scp`, but much more fully-featured.
-It inlcudes features to auto-resume transfers in case of
+It includes features to auto-resume transfers in case of
 disconnection. It has the same format of arguments as `scp`,
 but has many more options, check them out with:
 
@@ -170,15 +170,14 @@ have backups of those, so you're out of luck.
    $ flost
    This script will help you try to recover lost home or group directory contents.
    NB: Scratch directories are not backed up and cannot be recovered.
-   
+
    Currently anchoring the search under: $HOME
    If your lost files were on a different filesystem, exit now with Ctrl-C and
    rerun flost with a suitable '-w WHERE' argument (or see 'flost -h' for help).
 
    Please enter the date that you lost your files: 2024-10-01
-   
+
    ...
 
 Next section\:
 :doc:`applications`
-

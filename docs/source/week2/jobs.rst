@@ -45,18 +45,18 @@ are available for you to submit to:
 .. code-block::
 
    $ slist
-            			Current Negishi Accounts                              
-   ==============================================================================    
-                  |              CPU Partition              |    AI Partition        
-   Accounts       |   Total     Queue      Run      Free    |  GPU Hours Balance     
-   ============== | ========= ========= ========= ========= | ===================    
+            			Current Negishi Accounts
+   ==============================================================================
+                  |              CPU Partition              |    AI Partition
+   Accounts       |   Total     Queue      Run      Free    |  GPU Hours Balance
+   ============== | ========= ========= ========= ========= | ===================
    lab_queue      |       128        32        64        32 |                 0.0
 
 .. important::
 
    The `lab_queue` here is just a placeholder, in reality,
    this should be something similar to your PI's username.
-   in the following examples, please substitue `lab_queue`
+   in the following examples, please substitute `lab_queue`
    with an account found in the output of `slist`.
 
 .. admonition:: Empty slist
@@ -77,9 +77,9 @@ program:
    Partition statistics for cluster negishi at Thu Jul 17 16:12:58 EDT 2025
    Partition       #Nodes     #CPU_cores  Cores_pending   Job_Nodes MaxJobTime Cores Mem/Node
    Name  State   Total  Idle  Total   Idle Resorc  Other   Min   Max  Day-hr:mn /node     (GB)
-   cpu      up     446     0  57088   2078      0  15973     1 infin   infinite   128     257 
-   highmem  up       6     0    768    236      0   2114     1 infin   infinite   128    1031 
-   gpu      up       5     3    160    132      0      0     1 infin   infinite    32     515 
+   cpu      up     446     0  57088   2078      0  15973     1 infin   infinite   128     257
+   highmem  up       6     0    768    236      0   2114     1 infin   infinite   128    1031
+   gpu      up       5     3    160    132      0      0     1 infin   infinite    32     515
 
 To see what the different node types mean, use
 the `sfeatures` program:
@@ -93,11 +93,11 @@ the `sfeatures` program:
    g[000-004]  32    515500   G,g,MI210,mi210  gpu:3
 
 Use `AVAIL_FEATURES` as tags as a constraint
-on clusters with more distinct hardeware
+on clusters with more distinct hardware
 types.
 
 .. hint::
- 
+
    Use the `-C` or `\-\-constraint` option with `sbatch` to
    target one of the feature tags.
 
@@ -113,7 +113,7 @@ For more information see the page here:
 Essentially, you need to specify an account to submit
 to and a part of the cluster you want to submit to.
 Sometimes, you may want to specify a QoS for your
-job as well. 
+job as well.
 
 Please use a command-line text editor to
 create this shell script, named `example.sh`:
@@ -128,7 +128,7 @@ create this shell script, named `example.sh`:
    python example.py
 
 .. admonition:: Numpy again
-   
+
    If you ran into the *no module named numpy*
    error earlier, you will need to activate
    your conda environment inside your job as well.
@@ -154,7 +154,7 @@ scheduler with the `sbatch` program:
    $ sbatch example.sh
    Submitted batch job 19804935
 
-You have now submited your first supercomputing
+You have now submitted your first supercomputing
 resource allocation request. This job ID number
 is helpful to note down as it can be used elsewhere.
 
@@ -227,7 +227,7 @@ specific account? Specific user? Only our own jobs?
    :collapsible: closed
 
    Specific account: `squeue -A ACCOUNT_NAME`
-   
+
    Specific user: `squeue -u USERNAME`
 
    Only our own jobs: `squeue \-\- me`
@@ -308,7 +308,7 @@ To get out of the interactive slurm job, simply
 run the `exit` program and you'll be returned to
 the login node you were on previously.
 
-**Good citezenship**
+**Good citizenship**
 
 Last, but not least, there are four main points to touch
 on about good citizenship on HPC resources:
@@ -317,7 +317,7 @@ on about good citizenship on HPC resources:
    (don't ask for a large memory node if it's not needed)
 #. Do not abuse file systems
    (heavy I/O for /depot space, use /scratch instead)
-#. Do not submit lots of timy jobs, instead use the pilot-job pattern
+#. Do not submit lots of tiny jobs, instead use the pilot-job pattern
    with a workflow tool
 #. Do not submit jobs and camp
    (don't submit a GPU job from the Gateway for 24 hours so it's
@@ -325,4 +325,3 @@ on about good citizenship on HPC resources:
 
 Next section\:
 :doc:`../week3/week3`
-
