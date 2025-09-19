@@ -82,7 +82,7 @@ mounted on all Purdue community
 clusters. It is larger than your
 home directory (100GB free trial)
 and it can grow in 1TB increments
-at \$70/TB/year. It has reasonable
+at \$47/TB/year. It has reasonable
 performance with redundant hardware
 that is never purged and is protected
 by snapshots.
@@ -422,7 +422,7 @@ so, what other options exist?
 We can implement our basic knowledge of
 UNIX programs to isolate our job and
 save outputs to the tape archive. There
-isn't a "right" or "wrong" way ere, but this
+isn't a "right" or "wrong" way here, but this
 version of the submission file illustrates
 some good ideas with job behavior::
 
