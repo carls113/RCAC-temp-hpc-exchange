@@ -20,7 +20,8 @@ clusters:
 
 **Cloud**
 
-* Box.com / REED
+* Box.com / REED (retires soon)
+* SharePoint
 * GitHub (github.itap.purdue.edu)
 
 **Libraries**
