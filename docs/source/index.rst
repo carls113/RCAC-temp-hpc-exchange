@@ -11,9 +11,9 @@ Welcome to the HPC Exchange web page. We start here and will go through the othe
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
-   
+
+   introduction
    week1/week1
    week2/week2
    week3/week3
    week4/week4
-

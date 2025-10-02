@@ -226,6 +226,13 @@ as they fit within the job (RAM and CPUs)
 you can do whatever you want with the
 resources.
 
+.. note::
+
+   This is NOT real science, we're just doing
+   the same thing 3 times. In reality, you
+   would want to do this (usually) with different
+   inputs, so you can get different tasks done.
+
 There are many tools out there for automating
 computing of many tasks with the pilot
 job paradigm. Two examples are:
