@@ -130,10 +130,16 @@ To log in to Open on Demand, open your internet browser and
 navigate to `gateway.CLUSTER.rcac.purdue.edu`, where `CLUSTER`
 is again replaced with the name of the cluster you are
 trying to access. After you log in through Purdue's normal
-Single Sign On page, you should see something like this:
+Single Sign On page (no need to add ',push' to your password),
+you should see something like this:
 
 .. image:: ../_static/OoD_page.png
    :alt: Image showing what the Open on Demand (Gateway) entrance page, or dashboard, looks like.
+
+To open a shell to enter the Unix commands we will discuss
+this week, click the 'Clusters' menu in the top bar and hit the
+`>_CLUSTER shell access` option. This will open a new tab with a
+shell available for you to use.
 
 Next section\:
 :doc:`unix`
