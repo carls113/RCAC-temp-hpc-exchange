@@ -15,7 +15,7 @@ scheduler called **Slurm** which is the
 most common one used by major computing
 centers. It is a resource manager and a
 workload manager. Essentially, there are
-a finite number of compute jobs, many
+a finite number of compute nodes, many
 users of the system and even more jobs
 to be run. the scheduler tracks resource
 allocation requests and manages the
