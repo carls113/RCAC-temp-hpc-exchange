@@ -102,9 +102,9 @@ intelligence applications.
 Access to Anvil is granted by the NSF's ACCESS program and
 not by RCAC.
 
-**Secure clusters**
+**Clusters for Controlled Research**
 
-Purdue also operated two more secure clusters: Rossmann
+Purdue also operates two clusters for controlled research: Rossmann
 and Weber. Rossmann is built to handle health data with
 higher levels of access restrictions, such as patient
 data. Weber is designed to deal with export controlled
