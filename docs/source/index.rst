@@ -9,7 +9,7 @@ HPC Exchange Index Page
 .. raw:: html
 
    <strong>Testing</strong>
-   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"></script>
    <strong>Testing2</strong>
 
 Welcome to the HPC Exchange web page. We start here and will go through the other pages to learn about how to use Unix and HPC resources.
