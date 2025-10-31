@@ -12,7 +12,7 @@ Click here to add the meeting series to your calendar:
 
 .. raw:: html
 
-   <script type="text/javascript">import 'add-to-calendar-button';</script>
+   <script type="text/javascript">import add-to-calendar-button;</script>
    <strong>Testing3</strong>
    <add-to-calendar-button
    name="HPC Exchange"
