@@ -1,5 +1,6 @@
 .. raw:: html
 
+   <a href="testurl">testurl</a>
    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
 
 .. HPC_Exchange documentation master file, created by
@@ -16,6 +17,7 @@ Click here to add the meeting series to your calendar:
 
 .. raw:: html
 
+   <a href="testurl">testurl</a>
    <add-to-calendar-button
    name="HPC Exchange"
    options="'Apple','Google','iCal','Outlook.com','Yahoo','MicrosoftTeams'"
