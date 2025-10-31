@@ -1,8 +1,3 @@
-.. raw:: html
-
-   <a href="testurl">testurl</a>
-   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
-
 .. HPC_Exchange documentation master file, created by
    sphinx-quickstart on Mon Jun 30 14:52:52 2025.
    You can adapt this file completely to your liking, but it should at least
@@ -11,13 +6,18 @@
 HPC Exchange Index Page
 ==========================
 
+.. raw:: html
+
+   <strong>Testing</strong>
+   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+
 Welcome to the HPC Exchange web page. We start here and will go through the other pages to learn about how to use Unix and HPC resources.
 
 Click here to add the meeting series to your calendar:
 
 .. raw:: html
 
-   <a href="testurl">testurl</a>
+   <strong>Testing</strong>
    <add-to-calendar-button
    name="HPC Exchange"
    options="'Apple','Google','iCal','Outlook.com','Yahoo','MicrosoftTeams'"
