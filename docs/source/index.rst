@@ -10,8 +10,8 @@ Welcome to the HPC Exchange web page. We start here and will go through the othe
 
 Click here to add the meeting series to your calendar:
 
-.. raw:: html
-
+..
+   .. raw:: html
    <script type="text/javascript">import add-to-calendar-button;</script>
    <strong>Testing3</strong>
    <add-to-calendar-button
