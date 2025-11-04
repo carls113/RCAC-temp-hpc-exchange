@@ -15,7 +15,7 @@ Click here to add the meeting series to your calendar:
    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.12.13/dist/atcb.js"></script>
    <add-to-calendar-button
    name="HPC Exchange"
-   options="'Apple','Google','iCal','Outlook.com','Yahoo','MicrosoftTeams'"
+   options="'Apple','Google','iCal','Outlook.com','Yahoo'"
    location="Microsoft Teams Meeting"
    dates='[
    {
@@ -45,6 +45,37 @@ Click here to add the meeting series to your calendar:
    ]'
    timeZone="EST"
    ></add-to-calendar-button>
+   <add-to-calendar-button
+   name="Event Series"
+   dates='[
+     {
+       "name":"Reminder 1/3 to test the Add to Calendar Button",
+       "description":"This is the first part to check the Add to Calendar Button script at [url]https://add-to-calendar-button.com/[/url]",
+       "startDate":"today+3",
+       "startTime":"10:15",
+       "endTime":"23:30"
+     },
+     {
+       "name":"Reminder 3/3 to test the Add to Calendar Button",
+       "description":"This is the third part to check the Add to Calendar Button script at [url]https://add-to-calendar-button.com/[/url]",
+       "startDate":"today+8",
+       "startTime":"09:00",
+       "endTime":"19:00"
+     },
+     {
+       "name":"Reminder 2/3 to test the Add to Calendar Button",
+       "description":"This is the second part to check the Add to Calendar Button script at [url]https://add-to-calendar-button.com/[/url]",
+       "startDate":"today+5",
+       "startTime":"11:30",
+       "endTime":"20:00"
+     }
+   ]'
+   timeZone="EST"
+   location="World Wide Web"
+   options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+   lightMode="bodyScheme"
+   ></add-to-calendar-button>
+
 
 
 .. toctree::
