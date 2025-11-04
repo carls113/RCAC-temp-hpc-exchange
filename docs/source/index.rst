@@ -36,6 +36,16 @@ Click here to add the meeting series to your calendar:
    endTime="16:00"
    timeZone="EST"
    ></add-to-calendar-button>
+   <add-to-calendar-button
+   name="Title"
+   options="'Apple','Google'"
+   location="World Wide Web"
+   startDate="2025-11-06"
+   endDate="2025-11-06"
+   startTime="10:15"
+   endTime="23:30"
+   timeZone="EST"
+   ></add-to-calendar-button>
 
 
 .. toctree::
