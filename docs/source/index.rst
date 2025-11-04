@@ -6,16 +6,13 @@
 HPC Exchange Index Page
 ==========================
 
-.. raw:: html
-
-   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.12.13/dist/atcb.js" async defer></script>
-
 Welcome to the HPC Exchange web page. We start here and will go through the other pages to learn about how to use Unix and HPC resources.
 
 Click here to add the meeting series to your calendar:
 
 .. raw:: html
 
+   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.12.13/dist/atcb.js"></script>
    <add-to-calendar-button
    name="HPC Exchange"
    options="'Apple','Google','iCal','Outlook.com','Yahoo','MicrosoftTeams'"
