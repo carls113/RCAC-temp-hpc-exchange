@@ -212,7 +212,7 @@ Fortress directory.
 Fortress is good for backing up (archiving)
 critical research data. It is good at storing
 large files **NOT for many small files**.
-It is **NOT** for running jobs agains. It is
+It is **NOT** for running jobs against. It is
 made as a slow, long-term storage for your
 critical data.
 

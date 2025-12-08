@@ -51,7 +51,7 @@ had earlier to use the new paradigm::
    module load monitor
 
    mkdir -p ${SCRATCH}/${SLURM_JOB_NAME}
-   cd ${SCRATCH/${SLURM_JOB_NAME}
+   cd ${SCRATCH}/${SLURM_JOB_NAME}
 
    cp ~/example.sh ~/example.py ./
 
@@ -135,7 +135,7 @@ Create a new submission script called
 
    site=example-${SLURM_ARRAY_TASK_ID}
    mkdir -p ${SCRATCH}/${site}
-   cd ${SCRATCH/${site}
+   cd ${SCRATCH}/${site}
 
    cp ~/array.sh ~/example.py ./
 
